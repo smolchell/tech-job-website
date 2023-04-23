@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="Job Application page of Assignment 1" />
+  <meta name="keywords" content="HTML5, CSS layout" />
+  <meta name="author" content="Michelle Ko" />
+  <link href= "styles/style.css" rel="stylesheet"/>
+  <script src="scripts/apply.js"></script>
+  <title>Assignment 1 - Job Advertisement</title>
+  <!-- References to external CSS files -->
+ 
+  
+</head>
+
+<body>
+	<header>
+		<nav>
+			<p><a href="index.html"><img id="small_logo" src="images/cloud_computed_logo_white.png" alt="Cloud Computed Company Logo" title="Cloud Computed Home"/></a></p>
+			<p class="menu"><a href="index.html">Home</a></p> 
+			<p class="menu"><a href="jobs.html">Position Descriptions</a> </p> 
+			<p class="menu"><a href="apply.html">Position Application Centre</a></p> 
+			<p class="menu"><a href="about.html">About Assignment</a></p> 
+			<p class="menu"><a href="enhancements.html">Enhancements List</a></p>
+			<p class="menu"><a href="mailto:102927554@student.swin.edu.au">Contact Us</a><p>
+		</nav>
+    </header>  
+	
+	<h1>Position Application Centre</h1>
+	
+	<form id="applyform" method="post" action="https://mercury.swin.edu.au/it000000/formtest.php" novalidate="novalidate">
+		<fieldset>
+			<legend>Job details</legend>
+			<p><label for="job_ref_number">Job Reference Number</label> 
+				<p><input type="text" name= "job_ref_number" id="job_ref_number" maxlength="5" size="10" required="required" pattern="[A-Za-z0-9]{5,5}" /></p>
+			</p>
+		</fieldset>
+		<fieldset>
+			<legend>Contact Information</legend>
+			<p><label for="given_name">Given Name</label> 
+				<p><input type="text" name= "given_name" id="given_name" maxlength="25" size="10" required="required" pattern="[A-Za-z]+{,20}" /></p>
+			</p>
+			<p>
+				<label for="last_name">Last Name</label> 
+				<p><input type="text" name= "last_name" id="last_name" maxlength="25" size="10" required="required" pattern="[A-Za-z]+{,20}" /></p>
+			</p>
+			<p><label id="gender">Gender</label></p>
+			<p><input type="radio" id="female" name="gender" value="female" required="required" />
+				<label for="female">Female</label>
+				<input type="radio" id="male" name="gender" value="male"/>
+				<label for="male">Male</label> 
+				<input type="radio" id="other" name="gender" value="other"/>
+				<label for="other">Other</label> 
+			</p>
+			<p><label for="email">Email</label>
+				<p><input type="email" name="email" id="email" required="required"/></p>
+			</p>
+			<p><label for="phone_no">Phone Number</label>
+				<p><input type="text" id="phone_no" required="required" maxlength="12" size="12"  placeholder="04XXXXXXXXX" pattern="\d{8,12}"/></p>
+			</p>
+			<p><label for="street_address">Street Address </label> 
+				<p><input type="text" name="street_address" id="street_address" maxlength="40" size="45" required="required" pattern="[A-Za-z]+{,40}" /></p>
+			</p>
+			<p><label for="suburb_town">Suburb/ Town </label> 
+				<p><input type="text" name= "suburb_town" id="suburb_town" maxlength="20" size="45" required="required" pattern="[A-Za-z]+{,40}" /></p>
+			</p>
+			
+			<p><label for="state">State/ Territory</label> 
+				<p><select name="state" id="state" required="required">
+					<option value="">-- State/ Territory --</option>			
+					<option value="VIC">VIC</option>
+					<option value="NSW">NSW</option>
+					<option value="QLD">QLD</option>
+					<option value="NT">NT</option>
+					<option value="WA">WA</option>
+					<option value="SA">SA</option>
+					<option value="TAS">TAS</option>
+					<option value="ATC">ATC</option>
+				</select></p>
+			</p>
+			
+			<p><label for="post_code">Post Code</label>
+				<p><input type="text" name="post_code" id="post_code" required="required" maxlength="4" size="4" pattern="\d{4,4}"/></p>
+			</p>
+		</fieldset>
+		<fieldset>
+			<legend>Applicant Skill Set</legend>
+			
+			<p><label>Select all the skills you have:</label></p>
+			<p><p><label for="agile">					
+					<input type="checkbox" id="agile" name="skill_list" value="agile_programmer" checked="checked"/>
+				Agile Programming</label><p>
+				<p><label for="data_storage">
+					<input type="checkbox" id="data_storage" name="skill_list" value="data storage fundamentals" />
+				Data Storage Fundamentals</label></p>
+				<p><label for="design">
+					<input type="checkbox" id="design" name="skill_list" value="design Architect" />
+				Design Architecture</label></p>
+				<p><label for="networking">
+					<input type="checkbox" id="networking" name="skill_list" value="networker" />
+				Networking experience</label></p>
+				<label for="communication">
+					<input type="checkbox" id="communication" name="skill_list" value="communicator" />
+				Communication</label></p>
+				<label for="otherSkills">
+					<input type="checkbox" id="otherSkills" name="skill_list" value="otherSkills" />
+				Other Skills</label></p>
+			</p>
+			<p><label for="more_skills">Other Skills</label></p>
+			<textarea id="more_skills" name="more_skills" rows="4" cols="40" placeholder="textarea..."></textarea>
+		</fieldset>
+		<input id="submit" type= "submit" value="Submit Enquiry"/>
+		<input id="reset" type= "reset" value="Reset Form"/>
+	</form>
+</body>
+
+</html>
