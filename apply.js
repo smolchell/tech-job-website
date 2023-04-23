@@ -1,3 +1,4 @@
+// applied to apply.html
 "use strict";
 
 function validate(){
