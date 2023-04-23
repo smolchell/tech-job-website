@@ -3,7 +3,7 @@
 function validate(){
 	var errMsg="";
 	var result = true;
-	document.write("hi");
+	//document.write("hi");
 	
 	var postcode = document.getElementById("post_code").value;
 	var job_ref_number = document.getElementById("job_ref_number").value;
@@ -14,7 +14,7 @@ function validate(){
 		result = false;
 	}
 	
-	document.write(errMsg);
+	//document.write(errMsg);
 	if(state == ""){
 		errMsg = errMsg + "Please select your state.\n";
 		result = false;
@@ -27,7 +27,7 @@ function validate(){
 		}
 	}
 	
-	document.write(errMsg);
+	//document.write(errMsg);
 	
 	if(errMsg != ""){
 		alert(errMsg);
@@ -78,6 +78,6 @@ function checkStatePostcode(state, postcode){
 }
 function init(){
 	var applyform = document.getElementById("applyform");
-	applyform.onsubmit = window.alert("hi");
+	applyform.onsubmit = validate;
 }
 window.onload = init();
